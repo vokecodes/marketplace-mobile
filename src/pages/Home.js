@@ -463,7 +463,7 @@ const Home = () => {
           {PRODUCTS?.map((product) => (
             <div className="w-[48%] mb-8" key={product?.id}>
               <Link to="/product">
-                <div className="absolute ml-36 mt-2">
+                <div className="absolute ml-32 mt-2">
                   {product?.favourite ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -537,16 +537,16 @@ const Home = () => {
 
       <div className="fixed bottom-0 w-full">
         <div
-          className="flex justify-between px-8 py-4"
+          className="flex justify-between px-6 pt-4 pb-8"
           style={{ backgroundColor: "#eeeff1" }}
         >
           {MENU?.map((item) => (
             <div key={item?.id} className="">
               <div className="mb-1 flex justify-center">{item?.icon}</div>
               <p
-                className={`text-md ${
+                className={`text-sm ${
                   window.location.pathname === item?.path
-                    ? "text-black font-semibold"
+                    ? "text-black font-bold"
                     : "text-gray-400"
                 }`}
               >

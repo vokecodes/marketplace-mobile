@@ -157,7 +157,7 @@ const Product = () => {
           <p className="text-2xl secondary_color font-bold my-3">
             Essentials Men's Short-Sleeve Crewneck T-Shirt
           </p>
-          <div className="my-5 flex">
+          <div className="my-5 flex justify-between">
             <div className="flex items-center">
               <div className="mr-1">
                 <svg
@@ -175,12 +175,14 @@ const Product = () => {
               </div>
               <p className="text-md text-gray-400 font-medium">4.9 Ratings</p>
             </div>
-            <div className="flex-1 mx-4 flex items-center justify-between">
+            <div className="flex items-center justify-between">
               <div
                 className="w-1 h-1 rounded-full"
                 style={{ backgroundColor: "#878992" }}
               />
-              <p className="text-md text-gray-400 font-medium">2.3K+ Reviews</p>
+              <p className="mx-3 text-md text-gray-400 font-medium">
+                2.3K+ Reviews
+              </p>
               <div
                 className="w-1 h-1 rounded-full"
                 style={{ backgroundColor: "#878992" }}
@@ -203,20 +205,15 @@ const Product = () => {
               </p>
             </div>
           </div>
-          <div className="my-5 w-10/12">
-            <div className="flex justify-between">
-              <div className="flex">
-                <p className="text-md text-gray-400">Brand:</p>
-                <p className="ml-3 text-md secondary_color font-bold">
-                  ChArmkpR
-                </p>
-              </div>
-              <div className="flex">
-                <p className="text-md text-gray-400">Color:</p>
-                <p className="ml-3 text-md secondary_color font-bold">
-                  Aprikot
-                </p>
-              </div>
+
+          <div className="my-5 flex">
+            <div className="w-1/2 flex">
+              <p className="text-md text-gray-400 font-medium">Brand:</p>
+              <p className="ml-3 text-md secondary_color font-bold">ChArmkpR</p>
+            </div>
+            <div className="w-1/2 pl-6 flex">
+              <p className="text-md text-gray-400 font-medium">Color:</p>
+              <p className="ml-3 text-md secondary_color font-bold">Aprikot</p>
             </div>
           </div>
         </div>
