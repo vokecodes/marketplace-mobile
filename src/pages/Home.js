@@ -392,6 +392,7 @@ const Home = () => {
         showArrows={false}
         showThumbs={false}
         showStatus={false}
+        showIndicators={false}
         autoPlay
       >
         <div
