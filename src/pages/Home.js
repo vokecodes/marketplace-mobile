@@ -423,7 +423,7 @@ const Home = () => {
             backgroundImage: 'url("/beauty.jpg")',
           }}
         >
-          <div className="mt-20 w-44">
+          <div className="mt-20 w-52">
             <p className="text-black font-bold uppercase text-sm">
               #BeautySale
             </p>
