@@ -14,7 +14,7 @@ const CATEGORIES = [
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="#63656f"
-        className="w-6 h-6"
+        className="w-5 h-5"
       >
         <path
           strokeLinecap="round"
@@ -34,7 +34,7 @@ const CATEGORIES = [
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="#63656f"
-        className="w-6 h-6"
+        className="w-5 h-5"
       >
         <path
           strokeLinecap="round"
@@ -54,7 +54,7 @@ const CATEGORIES = [
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="#63656f"
-        className="w-6 h-6"
+        className="w-5 h-5"
       >
         <path
           strokeLinecap="round"
@@ -74,7 +74,7 @@ const CATEGORIES = [
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="#63656f"
-        className="w-6 h-6"
+        className="w-5 h-5"
       >
         <path
           strokeLinecap="round"
@@ -94,7 +94,7 @@ const CATEGORIES = [
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="#63656f"
-        className="w-6 h-6"
+        className="w-5 h-5"
       >
         <path
           strokeLinecap="round"
@@ -357,7 +357,7 @@ const Home = () => {
                 />
               </svg>
               <div
-                className={`w-5 h-4 bg_tertiary_color rounded-sm absolute right-16 ${badge}`}
+                className={`w-5 h-4 bg_tertiary_color rounded-sm absolute right-14 ${badge}`}
               >
                 <p className="text-xs text-white text-center">1</p>
               </div>
@@ -379,7 +379,7 @@ const Home = () => {
                 />
               </svg>
               <div
-                className={`w-5 h-4 bg_tertiary_color rounded-sm absolute right-4 ${badge}`}
+                className={`w-5 h-4 bg_tertiary_color rounded-sm absolute right-2 ${badge}`}
               >
                 <p className="text-xs text-white text-center">9+</p>
               </div>
@@ -438,13 +438,13 @@ const Home = () => {
         </div>
       </Carousel>
 
-      <div className="my-10 mx-2 flex flex-wrap w-full overflow-hidden">
+      <div className="my-10 mx-2 flex justify-between w-full overflow-hidden">
         {CATEGORIES?.map((category) => (
           <div
             key={category?.id}
-            className="w-[18%] mr-2 flex flex-col items-center"
+            className="w-[20%] flex flex-col items-center"
           >
-            <div className="w-10 h-10 mb-3 bg_category flex items-center justify-center rounded-md">
+            <div className="w-8 h-8 mb-3 bg_category flex items-center justify-center rounded-md">
               {category?.icon}
             </div>
             <p className="text-sm text-gray-400">{category?.title}</p>
@@ -493,7 +493,7 @@ const Home = () => {
                 <div className="h-40 overflow-hidden">
                   <img src={product?.image} alt="shirt" className="" />
                 </div>
-                <div className="bg-white px-4 py-2 shadow-md">
+                <div className="bg-white px-3 py-2 shadow-md">
                   <p className="text-sm text-gray-400">{product?.category}</p>
                   <p className="text-sm secondary_color font-extrabold mt-1">
                     {product?.title}
@@ -514,16 +514,16 @@ const Home = () => {
                           />
                         </svg>
                       </div>
-                      <p className="text-sm text-gray-400 font-medium">
+                      <p className="text-xs text-gray-400 font-medium">
                         {product?.rating}
                       </p>
                       <div className="border border-gray-300 mx-1 h-4" />
-                      <p className="text-sm text-gray-400 font-medium">
+                      <p className="text-xs text-gray-400 font-medium">
                         {product?.id}
                       </p>
                     </div>
                     <div>
-                      <p className="text-lg primary_color">
+                      <p className="text-md primary_color font-semibold">
                         ${formatPrice(product?.amount)}
                       </p>
                     </div>
