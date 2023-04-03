@@ -13,7 +13,7 @@ const CATEGORIES = [
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke="currentColor"
+        stroke="#63656f"
         className="w-6 h-6"
       >
         <path
@@ -33,13 +33,13 @@ const CATEGORIES = [
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke="currentColor"
+        stroke="#63656f"
         className="w-6 h-6"
       >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z"
+          d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
         />
       </svg>
     ),
@@ -53,13 +53,13 @@ const CATEGORIES = [
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke="currentColor"
+        stroke="#63656f"
         className="w-6 h-6"
       >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z"
+          d="M9 14.25l6-6m4.5-3.493V21.75l-3.75-1.5-3.75 1.5-3.75-1.5-3.75 1.5V4.757c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185zM9.75 9h.008v.008H9.75V9zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm4.125 4.5h.008v.008h-.008V13.5zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
         />
       </svg>
     ),
@@ -73,7 +73,7 @@ const CATEGORIES = [
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke="currentColor"
+        stroke="#63656f"
         className="w-6 h-6"
       >
         <path
@@ -93,7 +93,7 @@ const CATEGORIES = [
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke="currentColor"
+        stroke="#63656f"
         className="w-6 h-6"
       >
         <path
@@ -287,11 +287,15 @@ const Home = () => {
   const [searchBackgroundColor, setSearchBackgroundColor] =
     useState("transparent");
 
+  const [badge, setBadge] = useState("top-6");
+
   const changeBackground = () => {
     if (window.scrollY > 14) {
       setSearchBackgroundColor("pt-12 bg-white");
+      setBadge("top-14");
     } else {
       setSearchBackgroundColor("pt-5 bg-transparent");
+      setBadge("top-6");
     }
   };
 
@@ -352,7 +356,9 @@ const Home = () => {
                   d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
                 />
               </svg>
-              <div className="w-5 h-4 bg_tertiary_color rounded-sm absolute top-11 right-16">
+              <div
+                className={`w-5 h-4 bg_tertiary_color rounded-sm absolute right-16 ${badge}`}
+              >
                 <p className="text-xs text-white text-center">1</p>
               </div>
             </div>
@@ -372,7 +378,9 @@ const Home = () => {
                   d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z"
                 />
               </svg>
-              <div className="w-5 h-4 bg_tertiary_color rounded-sm absolute top-11 right-4">
+              <div
+                className={`w-5 h-4 bg_tertiary_color rounded-sm absolute top-6 right-4 ${badge}`}
+              >
                 <p className="text-xs text-white text-center">9+</p>
               </div>
             </div>
