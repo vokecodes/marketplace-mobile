@@ -1,25 +1,7 @@
 import { Link } from "react-router-dom";
-import { Transition, CSSTransition } from "react-transition-group";
 import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-import { useRef } from "react";
-
-const duration = 30000;
-
-const defaultStyle = {
-  transition: `opacity ${duration}ms ease-in-out`,
-  opacity: 0,
-};
-
-const transitionStyles = {
-  entering: { opacity: 1 },
-  entered: { opacity: 1 },
-  exiting: { opacity: 0 },
-  exited: { opacity: 0 },
-};
 
 const Product = () => {
-  const nodeRef = useRef(null);
-
   const formatPrice = (price) => {
     return parseInt(price).toFixed(2);
   };
@@ -29,7 +11,6 @@ const Product = () => {
       transitionName="example"
       transitionAppear={true}
       transitionAppearTimeout={700}
-      //    nodeRef={nodeRef} timeout={duration}
     >
       <div className="">
         <div className="px-4 py-6 mb-5 flex items-center">

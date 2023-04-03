@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 const CATEGORIES = [
@@ -121,7 +121,7 @@ const PRODUCTS = [
     image: "./shirt.png",
     title: `Essentials Men's Short-Sleeve Crewneck T-Shirt`,
     rating: 4.9,
-    id: 2536,
+    id: 2537,
     amount: 18,
   },
   {
@@ -129,7 +129,7 @@ const PRODUCTS = [
     image: "./shirt.png",
     title: `Essentials Men's Short-Sleeve Crewneck T-Shirt`,
     rating: 4.9,
-    id: 2536,
+    id: 2538,
     amount: 22,
   },
   {
@@ -137,7 +137,7 @@ const PRODUCTS = [
     image: "./shirt.png",
     title: `Essentials Men's Short-Sleeve Crewneck T-Shirt`,
     rating: 4.9,
-    id: 2536,
+    id: 2539,
     amount: 32,
   },
   {
@@ -145,7 +145,7 @@ const PRODUCTS = [
     image: "./shirt.png",
     title: `Essentials Men's Short-Sleeve Crewneck T-Shirt`,
     rating: 4.9,
-    id: 2536,
+    id: 2540,
     amount: 12,
   },
   {
@@ -153,7 +153,7 @@ const PRODUCTS = [
     image: "./shirt.png",
     title: `Essentials Men's Short-Sleeve Crewneck T-Shirt`,
     rating: 4.9,
-    id: 2536,
+    id: 2541,
     amount: 12,
   },
   {
@@ -162,7 +162,7 @@ const PRODUCTS = [
     image: "./shirt.png",
     title: `Essentials Men's Short-Sleeve Crewneck T-Shirt`,
     rating: 4.9,
-    id: 2536,
+    id: 2542,
     amount: 18,
   },
   {
@@ -170,7 +170,7 @@ const PRODUCTS = [
     image: "./shirt.png",
     title: `Essentials Men's Short-Sleeve Crewneck T-Shirt`,
     rating: 4.9,
-    id: 2536,
+    id: 2543,
     amount: 22,
   },
   {
@@ -178,7 +178,7 @@ const PRODUCTS = [
     image: "./shirt.png",
     title: `Essentials Men's Short-Sleeve Crewneck T-Shirt`,
     rating: 4.9,
-    id: 2536,
+    id: 2544,
     amount: 32,
   },
   {
@@ -186,7 +186,7 @@ const PRODUCTS = [
     image: "./shirt.png",
     title: `Essentials Men's Short-Sleeve Crewneck T-Shirt`,
     rating: 4.9,
-    id: 2536,
+    id: 2545,
     amount: 12,
   },
 ];
@@ -293,7 +293,7 @@ const BANNER_SLIDES = [
     buttonText: "Check this out",
   },
   {
-    id: 0,
+    id: 1,
     backgroundImage: 'url("/beauty.jpg")',
     label: "BeautySale",
     title: "Discover Our Beauty Selection",
@@ -413,7 +413,7 @@ const Home = () => {
         showThumbs={false}
         showStatus={false}
         showIndicators={false}
-        // autoPlay
+        autoPlay
         onChange={(index) => setActiveSlider(index)}
       >
         {BANNER_SLIDES?.map((slide) => (
@@ -445,25 +445,6 @@ const Home = () => {
             </div>
           </div>
         ))}
-        {/* <div
-          className="h-72 w-100 px-4 py-6 text-left bg-cover bg-no-repeat"
-          style={{
-            backgroundImage: 'url("/beauty.jpg")',
-          }}
-        >
-          <div className="mt-16 w-52">
-            <p className="text-black font-bold uppercase text-sm">
-              #
-            </p>
-            <p className="text-black uppercase text-xl font-bold my-2">
-             
-            </p>
-
-            <button className="w-36 p-3 mt-10 rounded-xl bg_secondary_color">
-              <p className="text-white text-xs text-center">Check this out</p>
-            </button>
-          </div>
-        </div> */}
       </Carousel>
 
       <div className="absolute right-6 top-20">
