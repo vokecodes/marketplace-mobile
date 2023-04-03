@@ -357,7 +357,7 @@ const Home = () => {
                 />
               </svg>
               <div
-                className={`w-5 h-4 bg_tertiary_color rounded-sm absolute right-14 ${badge}`}
+                className={`w-5 h-4 bg_tertiary_color rounded-sm absolute right-16 ${badge}`}
               >
                 <p className="text-xs text-white text-center">1</p>
               </div>
@@ -379,7 +379,7 @@ const Home = () => {
                 />
               </svg>
               <div
-                className={`w-5 h-4 bg_tertiary_color rounded-sm absolute right-3 ${badge}`}
+                className={`w-5 h-4 bg_tertiary_color rounded-sm absolute right-4 ${badge}`}
               >
                 <p className="text-xs text-white text-center">9+</p>
               </div>
