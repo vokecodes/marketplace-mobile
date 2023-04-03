@@ -292,7 +292,7 @@ const Home = () => {
   const changeBackground = () => {
     if (window.scrollY > 14) {
       setSearchBackgroundColor("pt-8 bg-white");
-      setBadge("top-10");
+      setBadge("top-9");
     } else {
       setSearchBackgroundColor("pt-5 bg-transparent");
       setBadge("top-6");
