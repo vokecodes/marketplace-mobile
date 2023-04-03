@@ -283,7 +283,27 @@ const MENU = [
   },
 ];
 
+const BANNER_SLIDES = [
+  {
+    id: 0,
+    backgroundImage: 'url("/shirts-hanging.jpg")',
+    label: "Fashion Day",
+    title: "80 % off",
+    description: "Discover fashion that suits to your style",
+    buttonText: "Check this out",
+  },
+  {
+    id: 0,
+    backgroundImage: 'url("/beauty.jpg")',
+    label: "BeautySale",
+    title: "Discover Our Beauty Selection",
+    buttonText: "Check this out",
+  },
+];
+
 const Home = () => {
+  const [activeSlider, setActiveSlider] = useState(0);
+
   const [searchBackgroundColor, setSearchBackgroundColor] =
     useState("transparent");
 
@@ -394,30 +414,36 @@ const Home = () => {
         showStatus={false}
         showIndicators={false}
         autoPlay
+        onChange={(index) => setActiveSlider(index)}
       >
-        <div
-          className="h-72 w-100 px-4 py-6 text-left bg-cover bg-no-repeat"
-          style={{
-            backgroundImage: 'url("/shirts-hanging.jpg")',
-          }}
-        >
-          <div className="mt-16 w-44">
-            <p className="text-black font-bold uppercase text-sm">
-              #Fashion Day
-            </p>
-            <p className="text-black uppercase text-4xl font-bold my-2">
-              80 % off
-            </p>
-            <p className="text-black text-sm font-light">
-              Discover fashion that suits to your style
-            </p>
+        {BANNER_SLIDES?.map((slide) => (
+          <div
+            key={slide.id}
+            className="h-72 w-100 px-4 py-6 text-left bg-cover bg-no-repeat"
+            style={{
+              backgroundImage: slide.backgroundImage,
+            }}
+          >
+            <div className="mt-16 w-44">
+              <p className="text-black font-bold uppercase text-sm">
+                #{slide.label}
+              </p>
+              <p className="text-black uppercase text-4xl font-bold my-2">
+                {slide.title}
+              </p>
+              <p className="text-black text-sm font-light">
+                {slide.description}
+              </p>
 
-            <button className="w-36 p-3 mt-4 rounded-xl bg_secondary_color">
-              <p className="text-white text-xs text-center">Check this out</p>
-            </button>
+              <button className="w-36 p-3 mt-4 rounded-xl bg_secondary_color">
+                <p className="text-white text-xs text-center">
+                  {slide.buttonText}
+                </p>
+              </button>
+            </div>
           </div>
-        </div>
-        <div
+        ))}
+        {/* <div
           className="h-72 w-100 px-4 py-6 text-left bg-cover bg-no-repeat"
           style={{
             backgroundImage: 'url("/beauty.jpg")',
@@ -425,31 +451,53 @@ const Home = () => {
         >
           <div className="mt-16 w-52">
             <p className="text-black font-bold uppercase text-sm">
-              #BeautySale
+              #
             </p>
             <p className="text-black uppercase text-xl font-bold my-2">
-              Discover Our Beauty Selection
+             
             </p>
 
             <button className="w-36 p-3 mt-10 rounded-xl bg_secondary_color">
               <p className="text-white text-xs text-center">Check this out</p>
             </button>
           </div>
-        </div>
+        </div> */}
       </Carousel>
 
-      <div className="my-10 mx-2 flex justify-between w-full overflow-hidden">
-        {CATEGORIES?.map((category) => (
-          <div
-            key={category?.id}
-            className="w-[20%] flex flex-col items-center"
-          >
-            <div className="w-8 h-8 mb-3 bg_category flex items-center justify-center rounded-md">
-              {category?.icon}
+      <div className="absolute right-6 top-20">
+        <div className="w-8 mt-5 mx-auto flex justify-between items-center">
+          {BANNER_SLIDES?.map((_, i) => (
+            <div
+              key={i}
+              className={`${
+                i === activeSlider
+                  ? "w-4 h-1 rounded-2xl bg_active_carousel_indicator"
+                  : "w-1 h-1 rounded-full bg_carousel_indicator"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className="my-10 mx-2 w-full overflow-hidden">
+        <div className="flex justify-between">
+          {CATEGORIES?.map((category) => (
+            <div
+              key={category?.id}
+              className="w-[20%] flex flex-col items-center"
+            >
+              <div className="w-8 h-8 mb-3 bg_category flex items-center justify-center rounded-md">
+                {category?.icon}
+              </div>
+              <p className="text-sm text-gray-400">{category?.title}</p>
             </div>
-            <p className="text-sm text-gray-400">{category?.title}</p>
-          </div>
-        ))}
+          ))}
+        </div>
+        <div className="w-10 mt-5 mx-auto flex justify-between items-center">
+          <div className="w-4 h-1 rounded-2xl bg_active_carousel_indicator" />
+          <div className="w-1 h-1 rounded-full bg_carousel_indicator" />
+          <div className="w-1 h-1 rounded-full bg_carousel_indicator" />
+        </div>
       </div>
 
       <div className="px-4 py-12 bg_gray">
@@ -463,7 +511,7 @@ const Home = () => {
           {PRODUCTS?.map((product) => (
             <div className="w-[48%] mb-8" key={product?.id}>
               <Link to="/product">
-                <div className="absolute ml-32 mt-2">
+                <div className="absolute ml-32 mt-3">
                   {product?.favourite ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -490,7 +538,7 @@ const Home = () => {
                     </svg>
                   )}
                 </div>
-                <div className="h-40 overflow-hidden">
+                <div className="bg_product_image h-40 overflow-hidden">
                   <img src={product?.image} alt="shirt" className="" />
                 </div>
                 <div className="bg-white px-3 py-2 shadow-md">
@@ -537,7 +585,7 @@ const Home = () => {
 
       <div className="fixed bottom-0 w-full">
         <div
-          className="flex justify-between px-6 pt-4 pb-8"
+          className="flex justify-between px-6 pt-4 pb-6"
           style={{ backgroundColor: "#eeeff1" }}
         >
           {MENU?.map((item) => (

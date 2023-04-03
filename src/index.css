@@ -22,6 +22,14 @@
   background-color: #2b2d40;
 }
 
+.bg_active_carousel_indicator {
+  background-color: #161828;
+}
+
+.bg_carousel_indicator {
+  background-color: #b3b8b5;
+}
+
 .bg_tertiary_color {
   background-color: #e65986;
 }
@@ -40,6 +48,10 @@
 
 .bg_small_shirt {
   background-color: #c4c5c5;
+}
+
+.bg_product_image {
+  background-color: #eaeaeb;
 }
 
 .example-appear {

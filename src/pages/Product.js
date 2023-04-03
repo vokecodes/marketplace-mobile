@@ -176,17 +176,11 @@ const Product = () => {
               <p className="text-md text-gray-400 font-medium">4.9 Ratings</p>
             </div>
             <div className="flex items-center justify-between">
-              <div
-                className="w-1 h-1 rounded-full"
-                style={{ backgroundColor: "#878992" }}
-              />
+              <div className="w-1 h-1 rounded-full bg_carousel_indicator" />
               <p className="mx-3 text-md text-gray-400 font-medium">
                 2.3K+ Reviews
               </p>
-              <div
-                className="w-1 h-1 rounded-full"
-                style={{ backgroundColor: "#878992" }}
-              />
+              <div className="w-1 h-1 rounded-full bg_carousel_indicator" />
             </div>
             <div>
               <p className="text-md text-gray-400 font-medium">2.9K+ Sold</p>
