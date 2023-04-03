@@ -291,8 +291,8 @@ const Home = () => {
 
   const changeBackground = () => {
     if (window.scrollY > 14) {
-      setSearchBackgroundColor("pt-12 bg-white");
-      setBadge("top-14");
+      setSearchBackgroundColor("pt-8 bg-white");
+      setBadge("top-10");
     } else {
       setSearchBackgroundColor("pt-5 bg-transparent");
       setBadge("top-6");
@@ -392,7 +392,7 @@ const Home = () => {
         showArrows={false}
         showThumbs={false}
         showStatus={false}
-        className=""
+        autoPlay
       >
         <div
           className="h-80 w-100 px-4 py-6 text-left bg-cover bg-no-repeat"
