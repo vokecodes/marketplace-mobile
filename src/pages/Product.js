@@ -170,16 +170,14 @@ const Product = () => {
               </div>
               <p className="text-md text-gray-400 font-medium">4.9 Ratings</p>
             </div>
-            <div className="flex-1 mx-3 flex items-center">
+            <div className="flex-1 mx-4 flex items-center justify-between">
               <div
-                className="w-2 h-2 rounded-full"
+                className="w-1 h-1 rounded-full"
                 style={{ backgroundColor: "#878992" }}
               />
-              <p className="mx-4 text-md text-gray-400 font-medium">
-                2.3K+ Reviews
-              </p>
+              <p className="text-md text-gray-400 font-medium">2.3K+ Reviews</p>
               <div
-                className="w-2 h-2 rounded-full"
+                className="w-1 h-1 rounded-full"
                 style={{ backgroundColor: "#878992" }}
               />
             </div>
