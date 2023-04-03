@@ -347,7 +347,7 @@ const Home = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="#2b2d40"
+                stroke="#000000"
                 className="w-8 h-8"
               >
                 <path
@@ -369,7 +369,7 @@ const Home = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="#2b2d40"
+                stroke="#000000"
                 className="w-8 h-8"
               >
                 <path
@@ -393,15 +393,15 @@ const Home = () => {
         showThumbs={false}
         showStatus={false}
         showIndicators={false}
-        autoPlay
+        // autoPlay
       >
         <div
-          className="h-80 w-100 px-4 py-6 text-left bg-cover bg-no-repeat"
+          className="h-72 w-100 px-4 py-6 text-left bg-cover bg-no-repeat"
           style={{
             backgroundImage: 'url("/shirts-hanging.jpg")',
           }}
         >
-          <div className="mt-20 w-44">
+          <div className="mt-16 w-44">
             <p className="text-black font-bold uppercase text-sm">
               #Fashion Day
             </p>
@@ -418,12 +418,12 @@ const Home = () => {
           </div>
         </div>
         <div
-          className="h-80 w-100 px-4 py-6 text-left bg-cover bg-no-repeat"
+          className="h-72 w-100 px-4 py-6 text-left bg-cover bg-no-repeat"
           style={{
             backgroundImage: 'url("/beauty.jpg")',
           }}
         >
-          <div className="mt-20 w-52">
+          <div className="mt-16 w-52">
             <p className="text-black font-bold uppercase text-sm">
               #BeautySale
             </p>
@@ -431,7 +431,7 @@ const Home = () => {
               Discover Our Beauty Selection
             </p>
 
-            <button className="w-36 p-3 mt-4 rounded-xl bg_secondary_color">
+            <button className="w-36 p-3 mt-10 rounded-xl bg_secondary_color">
               <p className="text-white text-xs text-center">Check this out</p>
             </button>
           </div>
