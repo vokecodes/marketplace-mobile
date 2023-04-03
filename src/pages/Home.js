@@ -393,7 +393,7 @@ const Home = () => {
         showThumbs={false}
         showStatus={false}
         showIndicators={false}
-        // autoPlay
+        autoPlay
       >
         <div
           className="h-72 w-100 px-4 py-6 text-left bg-cover bg-no-repeat"
