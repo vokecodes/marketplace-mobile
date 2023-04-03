@@ -310,7 +310,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-white h-1/2">
+    <div className="bg-white h-">
       <div
         className={`z-50 fixed top-0 w-full px-4 pb-6 ${searchBackgroundColor}`}
       >
@@ -452,7 +452,7 @@ const Home = () => {
         ))}
       </div>
 
-      <div className="px-4 py-12 bg_gray">
+      <div className="px-4 py-12 bg_gray" style={{ height: "52rem" }}>
         <div className="flex">
           <p className="flex-1 text-2xl secondary_color font-bold">
             Best Sale Product
