@@ -310,7 +310,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-white h-1/2">
       <div
         className={`z-50 fixed top-0 w-full px-4 pb-6 ${searchBackgroundColor}`}
       >
@@ -336,7 +336,7 @@ const Home = () => {
               type="text"
               name="search"
               id="search"
-              className="block w-full bg-transparent rounded-md border-2 border-gray-300 py-1.5 pl-10 text-gray-900 outline-none placeholder:text-gray-400 sm:text-sm sm:leading-6"
+              className="block w-full bg-transparent rounded-md border border-gray-300 py-1.5 pl-10 text-gray-900 outline-none placeholder:text-gray-400 sm:text-sm sm:leading-6"
               placeholder="Search.."
             />
           </div>
