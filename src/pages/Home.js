@@ -223,7 +223,7 @@ const MENU = [
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke="#4bb198"
+        stroke="#7f8595"
         className="w-6 h-6"
       >
         <path
@@ -244,7 +244,7 @@ const MENU = [
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke="#4bb198"
+        stroke="#7f8595"
         className="w-6 h-6"
       >
         <path
@@ -265,7 +265,7 @@ const MENU = [
         fill="none"
         viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke="#4bb198"
+        stroke="#7f8595"
         className="w-6 h-6"
       >
         <path
