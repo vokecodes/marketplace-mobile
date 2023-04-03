@@ -413,7 +413,7 @@ const Home = () => {
         showThumbs={false}
         showStatus={false}
         showIndicators={false}
-        autoPlay
+        // autoPlay
         onChange={(index) => setActiveSlider(index)}
       >
         {BANNER_SLIDES?.map((slide) => (
@@ -424,16 +424,18 @@ const Home = () => {
               backgroundImage: slide.backgroundImage,
             }}
           >
-            <div className="mt-16 w-44">
-              <p className="text-black font-bold uppercase text-sm">
-                #{slide.label}
-              </p>
-              <p className="text-black uppercase text-4xl font-bold my-2">
-                {slide.title}
-              </p>
-              <p className="text-black text-sm font-light">
-                {slide.description}
-              </p>
+            <div className="mt-16 w-48">
+              <div className="h-28">
+                <p className="text-black font-bold uppercase text-sm">
+                  #{slide.label}
+                </p>
+                <p className="text-black uppercase text-xl font-bold my-2">
+                  {slide.title}
+                </p>
+                <p className="text-black text-sm font-light">
+                  {slide.description}
+                </p>
+              </div>
 
               <button className="w-36 p-3 mt-4 rounded-xl bg_secondary_color">
                 <p className="text-white text-xs text-center">
