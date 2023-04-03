@@ -340,15 +340,15 @@ const Home = () => {
               placeholder="Search.."
             />
           </div>
-          <div className="flex">
-            <div className="mx-5">
+          <div className="ml-5 flex">
+            <div className="mr-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-7 h-7"
+                stroke="#2b2d40"
+                className="w-8 h-8"
               >
                 <path
                   strokeLinecap="round"
@@ -369,8 +369,8 @@ const Home = () => {
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-7 h-7"
+                stroke="#2b2d40"
+                className="w-8 h-8"
               >
                 <path
                   strokeLinecap="round"
